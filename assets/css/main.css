@@ -494,26 +494,48 @@ section,
   width: 120px;
   background-color: #ed2024;
 }
-.hero .icon-box h6 a {
+
+.arrow-wrap {
   display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 600;
-  color: var(--heading-color);
-  text-decoration: none;
-  position: relative;
-  transition: all 0.3s ease;
+  margin-left: 6px;
 }
 
-.hero .icon-box h6 a i {
+.arrow {
+  opacity: 1;  /* Keep arrows visible initially */
+  transform: translateX(0); /* Start at their original position */
+  transition: opacity 1s ease, transform 1s ease;  /* Slow down the transition */
+  margin-left: 2px;
   display: inline-block;
-  transition: transform 0.3s ease;
+  font-size: 13px;  /* Maintain the same font size */
+  line-height: 1;  /* Ensure the height remains the same */
 }
 
-.hero .icon-box:hover h6 a i {
-  transform: translateX(20px) scaleX(2.5);
+/* On hover, arrows move to the right and fade out sequentially */
+.icon-box:hover .arrow-3 {
+  transform: translateX(30px); /* Move the last arrow to the right */
+  opacity: 0; /* Fade out */
+  transition-delay: 0s; /* No delay for the last arrow */
 }
 
+.icon-box:hover .arrow-2 {
+  transform: translateX(30px); /* Move the second arrow to the right */
+  opacity: 0; /* Fade out */
+  transition-delay: 0.2s; /* Slight delay for the second arrow */
+}
+
+.icon-box:hover .arrow-1 {
+  transform: translateX(30px); /* Move the first arrow to the right */
+  opacity: 0; /* Fade out */
+  transition-delay: 0.4s; /* Delay for the first arrow */
+}
+
+/* Ensure arrows return to their original position when not hovered */
+.icon-box:not(:hover) .arrow-1,
+.icon-box:not(:hover) .arrow-2,
+.icon-box:not(:hover) .arrow-3 {
+  opacity: 1;
+  transform: translateX(0); /* Start from original position */
+}
 
 @media (min-width: 1400px) {
   .hero .icon-box .icon::after {
@@ -869,9 +891,12 @@ section,
 .hero-images .big {
   width: 100%;
   height: 588px;
-  object-fit: cover;
+  /* object-fit: cover; */
   border-radius: 8px;
   display: block;
+  position: relative;
+  left: 35px;
+  /* top: 50px; */
 }
 
 .bottom-images {
@@ -1025,4 +1050,19 @@ section,
         flex-direction: column;
         gap: 10px;
       }
+      .small{
+        bottom: 500px !important;
+      }
     }
+
+        @media (max-width: 400px){
+           .small{
+            height: 95px !important;
+            width: 100px !important;
+            position: relative;
+        bottom: 550px !important;
+        left: 25px;
+          border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+      }
+        }
