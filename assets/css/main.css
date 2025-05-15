@@ -322,6 +322,7 @@ h6 {
 
   .mobile-nav-active .navmenu > ul {
     display: block;
+    height: 50vh;
   }
 }
 
@@ -361,6 +362,7 @@ section,
   section,
   .section {
     scroll-margin-top: 76px;
+    padding: 20px;
   }
 }
 
@@ -864,21 +866,25 @@ section,
 
 .hero {
   display: flex;
-  padding: 20px 20px 20px 0;
+  padding: 20px 20px 20px 30px;
   align-items: flex-start;
 }
 .hero-text {
   max-width: 50%;
   margin-top: 90px;
+
 }
+
 .hero-text span {
   font-weight: 700;
-  position: relative;
-  bottom: 10px ;
+  /* position: relative; */
+  /* bottom: 10px ; */
+
 }
 .hero-text h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+    line-height: 50px;
 }
 .hero-text p {
   font-size: 1rem;
@@ -896,14 +902,14 @@ section,
   border-radius: 8px;
   display: block;
   position: relative;
-  left: 35px;
+  left: 69px;
   /* top: 50px; */
 }
 
 .bottom-images {
   position: absolute;
   bottom: 0;
-  right: 420px;
+  right: 385px;
   display: flex;
   gap: 10px;
   z-index: 1;
@@ -1031,17 +1037,29 @@ section,
   .small-wrapper::after {
     display: none;
   }
+   .small {
+   display: none !important;
+  }
+  .big{
+    display: none !important;
+  }
+
 }
 
 @media (max-width: 600px) {
   .hero {
     padding: 10px;
+    position: relative;
+    bottom: 40px;
   }
   .hero-text h1 {
     font-size: 2rem;
+    text-align: start;
+    line-height: 42px;
   }
   .hero-text p {
     font-size: 0.9rem;
+    text-align: start;
   }
   .bottom-images img,
   .small-wrapper img {
@@ -1053,18 +1071,37 @@ section,
     gap: 10px;
   }
   .small {
-    bottom: 500px !important;
+   display: none !important;
   }
+  .big{
+    display: none !important;
+  }
+
 }
 
 @media (max-width: 400px) {
   .small {
-    height: 95px !important;
+    /* height: 95px !important;
     width: 100px !important;
     position: relative;
     bottom: 550px !important;
     left: 25px;
     border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    border-top-right-radius: 15px; */
+    display: none !important;
   }
+    .big{
+      display: none !important;
+    }
+
+}
+
+
+.services{
+   text-align: center;
+  font-size: 32px;
+  font-weight: 700 !important;
+  margin-bottom: 15px;
+  padding-bottom: 4rem;
+  text-transform: uppercase;
 }
