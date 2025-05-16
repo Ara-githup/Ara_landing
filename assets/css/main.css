@@ -1233,6 +1233,13 @@ margin-bottom: 1rem;
 
 }
 
+@media (max-width: 480px) {
+.header img{
+      width: 120px;
+    }
+
+}
+
 @media (max-width: 400px) {
   .small {
     /* height: 95px !important;
@@ -1247,8 +1254,13 @@ margin-bottom: 1rem;
     .big{
       display: none !important;
     }
+    .header img{
+      width: 120px;
+    }
 
 }
+
+
 
 /* services---------------------- */
 
