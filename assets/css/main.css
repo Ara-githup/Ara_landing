@@ -249,6 +249,9 @@ h6 {
   }
 }
 @media (max-width: 1398px) {
+  .hero-images .big{
+    left: 40px !important;
+  }
 .bottom-images {
     position: absolute;
     bottom: 0;
@@ -377,11 +380,17 @@ section,
   }
   .bottom-images {
     position: absolute;
-    top:470px;
+    top:460px;
     right: 275px !important;
     display: flex;
     gap: 10px;
     z-index: 1;
+}
+.hero-text h1{
+font-size: 20px !important;
+}
+.hero-text p{
+font-size: 15px !important;
 }
 .hero-images .big{
   top:55px
