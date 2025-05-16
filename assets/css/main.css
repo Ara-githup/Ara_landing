@@ -426,6 +426,7 @@ section,
 .hero .container {
   position: relative;
   z-index: 3;
+  /* background-color: #03c988; */
 }
 
 .hero h1 {
